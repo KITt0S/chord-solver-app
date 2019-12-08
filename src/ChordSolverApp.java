@@ -14,14 +14,13 @@ public class ChordSolverApp {
             System.out.print( "x=" + tmp + "; " );
             double err = Math.abs( tmp - x );
             System.out.print( "err=" + err + "\n" );
+            x = tmp;
             if( err < eps ) {
 
                 break;
-            } else {
-
-                x = tmp;
             }
         }
+        System.out.println( "Answer is : x=" + String.format( "%.3f", x ) );
     }
 
     private static double getF( double x ) {
